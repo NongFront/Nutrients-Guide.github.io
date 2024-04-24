@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrients Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Nutrients Calculator</h1>
+    <label for="weightInput">Weight (kg):</label>
+    <input type="number" id="weightInput" min="1" step="0.01"><br><br>
+
+    <label for="exerciseLevel">Exercise Level:</label>
+    <select id="exerciseLevel">
+        <option value="none">None</option>
+        <option value="light">Light</option>
+        <option value="heavy">Heavy</option>
+    </select><br><br>
+
+    <button id="calculate1">Calculate</button><br><br>
+
+    <div id="results">
+        <p id="carbResult"></p>
+        <p id="proteinResult"></p>
+        <p id="fatResult"></p>
+        <p id="vitaminResult"></p>
+    </div>
+    <h1>Nutrients that you eat</h1>
+    <ul>
+        <h2>Carbohydrates</h2>
+        <li>
+            <label for="cookedRiceInput">cooked rice (g):</label><br>
+            <input type="number" id="cookedRiceInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="bananaInput">banana :</label><br>
+            <input type="number" id="bananaInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="OrangeOrAppleInput">orange or apple :</label><br>
+            <input type="number" id="OrangeOrAppleInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="breadInput">bread (slice):</label><br>
+            <input type="number" id="breadInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="softDrinkInput">soft drink (can):</label><br>
+            <input type="number" id="softDrinkInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="fruitJuiceInput">fruit juice (glass):</label><br>
+            <input type="number" id="fruitJuiceInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="BubbleTeaInput">Bubble tea (glass):</label><br>
+            <input type="number" id="BubbleTeaInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="sugarInput">sugar (tablespoons):</label><br>
+            <input type="number" id="sugarInput" min="0" step="1">
+        </li>
+
+
+        <h2>Protein</h2>
+        <li>
+            <label for="eggInput">Egg:</label><br>
+            <input type="number" id="eggInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="chickenBreastInput">Chicken Breast (g):</label><br>
+            <input type="number" id="chickenBreastInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="shrimpInput">Shrimp (g):</label><br>
+            <input type="number" id="shrimpInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="beefInput">Beef (g):</label><br>
+            <input type="number" id="beefInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="porkInput">Pork (g):</label><br>
+            <input type="number" id="porkInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="salmonInput">Salmon (g):</label><br>
+            <input type="number" id="salmonInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="soyMilkInput">Soy Milk (cups):</label><br>
+            <input type="number" id="soyMilkInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="cowMilkInput">Cow Milk (cups):</label><br>
+            <input type="number" id="cowMilkInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="yogurtInput">Yogurt (cups):</label><br>
+            <input type="number" id="yogurtInput" min="0" step="1">
+        </li>
+        <h2>Fat</h2>
+        <li>
+            <label for="chiaSeedsInput">Chia Seeds (g):</label><br>
+            <input type="number" id="chiaSeedsInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="darkChocolateInput">Dark Chocolate (g):</label><br>
+            <input type="number" id="darkChocolateInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="avocadoInput">Avocado (Half):</label><br>
+            <input type="number" id="avocadoInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="olivesInput">olives (g):</label><br>
+            <input type="number" id="olivesInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="tofuInput">tofu (g):</label><br>
+            <input type="number" id="tofuInput" min="0" step="1">
+        </li>
+        
+        <h2>Vitamin</h2>
+        <li>
+            <label for="sweetChiliInput">Sweet chili (g):</label><br>
+            <input type="number" id="sweetChiliInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="broccoliInput">Broccoli (g):</label><br>
+            <input type="number" id="broccoliInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="KaleInput">Kale (g):</label><br>
+            <input type="number" id="KaleInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="spinachInput">Spinach (g):</label><br>
+            <input type="number" id="spinachInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="moringaLeavesInput">Moringa leaves (g):</label><br>
+            <input type="number" id="moringaLeavesInput" min="0" step="1">
+        </li>
+        <li>
+            <label for="orangesInput">Oranges (g):</label><br>
+            <input type="number" id="orangesInput" min="0" step="1">
+        </li>
+    </ul>
+
+    <button id="calculate2">Calculate</button><br><br>
+    
+
+    <div id="results2">
+        <p id="carbResult2"></p>
+        <p id="proteinResult2"></p>
+        <p id="fatResult2"></p>
+        <p id="vitaminResult2"></p>
+    </div>
+
+    <!-- Form to add meal -->
+    <h1>Nutrients Calculator</h1>
+    <!-- ส่วนสำหรับกรอกข้อมูล -->
+    <h2>Enter Your Food Intake for Today</h2>
+    <label for="dateInput">Date:</label>
+    <input type="date" id="dateInput"><br><br>
+
+    <label for="breakfastInput">Breakfast:</label>
+    <input type="text" id="breakfastInput"><br><br>
+
+    <label for="lunchInput">Lunch:</label>
+    <input type="text" id="lunchInput"><br><br>
+
+    <label for="dinnerInput">Dinner:</label>
+    <input type="text" id="dinnerInput"><br><br>
+
+    <label for="snackInput">Snack:</label>
+    <input type="text" id="snackInput"><br><br>
+
+    <button id="saveTodayData">Save Today's Data</button>
+    <button id="showTodayData">Show Today's Data</button>
+    <div id="todayData"></div>
+
+    <script>
+        // บันทึกข้อมูลวันที่
+        function saveTodayData() {
+            const date = document.getElementById('dateInput').value;
+            const breakfast = document.getElementById('breakfastInput').value;
+            const lunch = document.getElementById('lunchInput').value;
+            const dinner = document.getElementById('dinnerInput').value;
+            const snack = document.getElementById('snackInput').value;
+
+            localStorage.setItem(date, JSON.stringify({ breakfast, lunch, dinner, snack }));
+            alert('Data saved successfully!');
+        }
+
+        // แสดงข้อมูลวันนี้
+        function showTodayData() {
+            const date = document.getElementById('dateInput').value;
+            const savedData = localStorage.getItem(date);
+
+            if (savedData) {
+                const { breakfast, lunch, dinner, snack } = JSON.parse(savedData);
+                let html = `<h2>Food Intake on ${date}</h2><ul>`;
+                if (breakfast) {
+                    html += `<li>Breakfast: ${breakfast}</li>`;
+                }
+                if (lunch) {
+                    html += `<li>Lunch: ${lunch}</li>`;
+                }
+                if (dinner) {
+                    html += `<li>Dinner: ${dinner}</li>`;
+                }
+                if (snack) {
+                    html += `<li>Snack: ${snack}</li>`;
+                }
+                html += '</ul>';
+
+                const todayDataDiv = document.getElementById('todayData');
+                todayDataDiv.innerHTML = html;
+            } else {
+                alert('No data found for the selected date.');
+            }
+        }
+
+        document.getElementById('saveTodayData').addEventListener('click', saveTodayData);
+        document.getElementById('showTodayData').addEventListener('click', showTodayData);
+
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
