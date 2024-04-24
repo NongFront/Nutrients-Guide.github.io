@@ -1,0 +1,112 @@
+/* เปลี่ยนแบบอักษร */
+body {
+    font-family: Myriad Hebrew, Arial; 
+}
+
+/* ปรับขนาดและระยะห่างของหัวเรื่อง */
+h1 {
+    font-size: 2em; /* ขนาดอักษรของหัวเรื่องใหญ่ขึ้น */
+    margin-bottom: 20px; /* ระยะห่างด้านล่างของหัวเรื่องเพิ่มเติม */
+}
+
+/* ปรับลักษณะของรายการในรายการอ้างอิง */
+li {
+    margin-bottom: 10px; /* ระยะห่างระหว่างรายการในรายการอ้างอิง */
+}
+
+/* เปลี่ยนสีพื้นหลังของปุ่ม Calculate */
+#calculate1,
+#calculate2 {
+    background-color: #4CAF50; /* เปลี่ยนสีพื้นหลังของปุ่มเป็นสีเขียว */
+    color: white; /* เปลี่ยนสีของข้อความบนปุ่มเป็นสีขาว */
+    border: none; /* ไม่แสดงเส้นขอบของปุ่ม */
+    padding: 10px 20px; /* ปรับขนาดพื้นที่ภายในปุ่ม */
+    text-align: center; /* จัดข้อความภายในปุ่มกลางแนว */
+    text-decoration: none; /* ไม่เป็นการเส้นใต้ข้อความบนปุ่ม */
+    display: inline-block; /* แสดงปุ่มเป็นบล็อกที่สามารถรวมอื่น ๆ ได้ */
+    font-size: 16px; /* ขนาดข้อความบนปุ่ม */
+    margin: 4px 2px; /* ระยะห่างของปุ่ม */
+    cursor: pointer; /* เปลี่ยนรูปแบบของเคอร์เซอร์เป็นลูกศรเมื่อนำไปชี้ที่ปุ่ม */
+    border-radius: 8px; /* ปรับขอบของปุ่มให้มนชนาดของขอบ */
+}
+
+body {
+    /* กำหนดรูปภาพพื้นหลังด้วย URL */
+    background-image: url('2.jpg');
+
+    /* กำหนดขนาดของรูปภาพ */
+    background-size: cover;
+
+    /* ตำแหน่งของรูปภาพ */
+ background-position: right center;
+
+    /* ไม่ให้ซ้ำซ้อนรูปภาพ */
+    background-repeat: no-repeat;
+
+    /* ระบุว่ารูปภาพต้องต่อตัวกับอะไร */
+    background-attachment: fixed;
+
+    /* กำหนดตำแหน่งของรูปภาพตามตำแหน่งของเอลิเมนต์ */
+    background-origin: border-box;
+
+    /* กำหนดขอบการตัดของพื้นหลัง */
+    background-clip: border-box;
+
+  background-size: 73%;
+}
+
+.warning {
+    color: red;
+    font-weight: bold;
+    padding: 0.2em 0.5em; /* เพิ่มช่องว่างด้านบนและด้านล่าง 0.2em ด้านซ้ายและด้านขวา 0.5em */
+    border-radius: 5px; /* ขอบมนมีความโค้ง */
+    background-color: #ffe6e6; /* สีพื้นหลัง */
+}
+/* กำหนดรูปแบบของช่อง */
+input[type="number"],
+select {
+    padding: 10px; /* ขนาดของช่องว่างด้านใน */
+    border: 1px solid #ccc; /* เส้นขอบ */
+    border-radius: 5px; /* ขอบมนมีความโค้ง */
+    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+}
+
+/* กำหนดรูปแบบของปุ่มให้สวยงาม */
+button {
+    padding: 10px 20px; /* ขนาดของช่องว่าง */
+    border: none; /* ไม่มีเส้นขอบ */
+    border-radius: 5px; /* ขอบมนมีความโค้ง */
+    cursor: pointer; /* เปลี่ยนรูปแบบเคอร์เซอร์ */
+    background-color: #007bff; /* สีพื้นหลัง */
+    color: #fff; /* สีข้อความ */
+    transition: background-color 0.3s ease; /* การเปลี่ยนสีพื้นหลังด้วยความนุ่มนวล */
+}
+
+/* การเปลี่ยนสีพื้นหลังของปุ่มเมื่อชี้ */
+button:hover {
+    background-color: #0056b3; /* เปลี่ยนสีพื้นหลังเมื่อชี้ */
+}
+
+/* กำหนดรูปแบบของปุ่มเพิ่มเติม */
+button[type="button"] {
+    margin-right: 10px; /* ระยะห่างด้านขวา */
+}
+
+/* กำหนดรูปแบบของปุ่มเมื่อกด */
+button:active {
+    transform: translateY(1px); /* เลื่อนปุ่มลงเล็กน้อยเมื่อกด */
+}
+
+select option {
+    font-weight: bold; /* ทำให้ตัวเลือกหนาขึ้น */
+}
+body {
+background-color: #e0f7fa;
+
+
+}
+
+
+
+
+
