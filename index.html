@@ -27,6 +27,16 @@
         <p id="vitaminResult"></p>
     </div>
     <h1>Nutrients that you eat</h1>
+<h3><label for="calculateBy">select option calculate by</label><br><h3>
+<div class="calculateBy">
+    <select id="calculateBy">
+        <option value="Recipes">Recipes</option>
+        <option value="Manu">Manu</option>
+    </select><br>
+</div>
+
+<div class ="cal_by" >
+<div id="Recipes" class="data">
     <ul>
         <h2>Carbohydrates</h2>
         <li>
@@ -148,10 +158,28 @@
             <input type="number" id="orangesInput" min="0" step="1">
         </li>
     </ul>
+</div>
+</div>
+<div id="Manu" class="data">
+    <select id="calManu">
+        <option value="Stir-fried-basil">Stir-fried basil</option>
+        <option value="Garlic-pork-rice">Garlic-pork-rice</option>
+        <option value="omelet-rice">omelet-rice</option>
+        <option value="Pad-Thai">Pad-Thai</option>
+        <option value="Sukiyaki">Sukiyaki</option>
+        <option value="noodles">noodles</option>
+        <option value="papaya-salad">papaya-salad</option>
+        <option value="spicy-prawn-soup">spicy-prawn-soup</option>
+        <option value="papaya-salad">papaya-salad</option>
+        <option value="Duck-on-rice">Duck-on-rice</option>
+    </select><br>
 
+
+</div>
     <button id="calculate2">Calculate</button><br><br>
-    
 
+    <!-- Form to add meal -->
+    <h1>Nutrients Calculator</h1>
     <div id="results2">
         <p id="carbResult2"></p>
         <p id="proteinResult2"></p>
@@ -159,76 +187,65 @@
         <p id="vitaminResult2"></p>
     </div>
 
-    <!-- Form to add meal -->
-    <h1>Nutrients Calculator</h1>
-    <!-- ส่วนสำหรับกรอกข้อมูล -->
-    <h2>Enter Your Food Intake for Today</h2>
-    <label for="dateInput">Date:</label>
-    <input type="date" id="dateInput"><br><br>
+<h1>Nutrition deficiency</h1>
 
-    <label for="breakfastInput">Breakfast:</label>
-    <input type="text" id="breakfastInput"><br><br>
+<p id="carbDifference"></p>
+<p id="carbStatus"></p>
 
-    <label for="lunchInput">Lunch:</label>
-    <input type="text" id="lunchInput"><br><br>
+<p id="proteinDifference"></p>
+<p id="proteinStatus"></p>
 
-    <label for="dinnerInput">Dinner:</label>
-    <input type="text" id="dinnerInput"><br><br>
+<p id="fatDifference"></p>
+<p id="fatStatus"></p>
 
-    <label for="snackInput">Snack:</label>
-    <input type="text" id="snackInput"><br><br>
+<p id="vitaminDifference"></p>
+<p id="vitaminStatus"></p>
 
-    <button id="saveTodayData">Save Today's Data</button>
-    <button id="showTodayData">Show Today's Data</button>
-    <div id="todayData"></div>
+<div id="calendarContainer">
+</div>
 
-    <script>
-        // บันทึกข้อมูลวันที่
-        function saveTodayData() {
-            const date = document.getElementById('dateInput').value;
-            const breakfast = document.getElementById('breakfastInput').value;
-            const lunch = document.getElementById('lunchInput').value;
-            const dinner = document.getElementById('dinnerInput').value;
-            const snack = document.getElementById('snackInput').value;
+<h3>Meal Type:</h3>
+<select id="mealTypeInput">
+    <option value="">Select a meal type</option>
+    <option value="breakfast">Breakfast</option>
+    <option value="lunch">Lunch</option>
+    <option value="dinner">Dinner</option>
+    <option value="snack">Snack</option>
+</select><br><br>
 
-            localStorage.setItem(date, JSON.stringify({ breakfast, lunch, dinner, snack }));
-            alert('Data saved successfully!');
-        }
+<h2>Enter Your Food Intake for Today</h2>
+<label for="dateInput">Date:</label>
+<input type="date" id="dateInput"><br><br>
+<p id="selectedDateDisplay"></p>
+<button id="showDataButton">Show Data</button>
 
-        // แสดงข้อมูลวันนี้
-        function showTodayData() {
-            const date = document.getElementById('dateInput').value;
-            const savedData = localStorage.getItem(date);
-
-            if (savedData) {
-                const { breakfast, lunch, dinner, snack } = JSON.parse(savedData);
-                let html = `<h2>Food Intake on ${date}</h2><ul>`;
-                if (breakfast) {
-                    html += `<li>Breakfast: ${breakfast}</li>`;
-                }
-                if (lunch) {
-                    html += `<li>Lunch: ${lunch}</li>`;
-                }
-                if (dinner) {
-                    html += `<li>Dinner: ${dinner}</li>`;
-                }
-                if (snack) {
-                    html += `<li>Snack: ${snack}</li>`;
-                }
-                html += '</ul>';
-
-                const todayDataDiv = document.getElementById('todayData');
-                todayDataDiv.innerHTML = html;
-            } else {
-                alert('No data found for the selected date.');
-            }
-        }
-
-        document.getElementById('saveTodayData').addEventListener('click', saveTodayData);
-        document.getElementById('showTodayData').addEventListener('click', showTodayData);
+<!-- Display selected meal type and date -->
+<div id="selectedMealType"></div><br>
+<div id="selectedDate"></div>
+<p id="carbResult3"></p>
+<p id="proteinResult3"></p>
+<p id="fatResult3"></p>
+<p id="vitaminResult3"></p>
 
 
-    </script>
     <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+<script>
+    $(document).ready(function(){
+    $("#calculateBy").on('change', function(){
+        var cal_by = $(this).val();
+        if(cal_by) {
+            $(".data").hide();
+            $("#" + cal_by).show();
+        } else {
+            $(".data").show(); // Show all if no option is selected
+        }
+    }).change();
+});
+
+</script>
+
 </body>
 </html>
