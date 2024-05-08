@@ -1,4 +1,3 @@
-
 document.getElementById('calculate1').addEventListener('click', function() {
     const weight = parseFloat(document.getElementById('weightInput').value);
     const exerciseLevel = document.getElementById('exerciseLevel').value;
